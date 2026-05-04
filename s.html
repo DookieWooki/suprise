@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Popup</title>
+  <style>
+    body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+    #popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 10px;
+      border: 0px solid black;
+    }
+
+    #popup img {
+      max-width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+
+<button onclick="showImage(this)">Klik hier voor een suprise</button>
+
+<div id="popup">
+  <img src="rat.jpg" alt="Popup Image">
+  <br>
+</div>
+
+<audio id="sound" src="Circus.mp4"></audio>
+<script>
+
+  function showImage(btn) {
+    document.getElementById("popup").style.display = "block";
+    btn.style.display = "none"; 
+        document.getElementById("sound").play();
+  }
+</script>
+
+  </body>
+</html>
